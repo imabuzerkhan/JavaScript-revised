@@ -1,6 +1,6 @@
 //  logical operator
 
-// ! Start from Not operator
+// ! Start from And operator
 // * for example it denotes with (&)
 // ? if both value are true then it will return true oterwise it return false
 
@@ -15,7 +15,7 @@ if(a == b && b > c){
 }
 
 
-// ! Start from And operator
+// ! Start from or operator
 // * for example it denotes with (||)
 // ? if one value are true then it will return true 
 
@@ -27,4 +27,16 @@ if(d == e || e < f){
   console.log("It return true because one value is true")
 }else{
   console.log("both value are false that why its return false")
+}
+
+// ! Not operator
+// * it make true to false and false to true and its denotes with (!)
+
+let k = 20 ;
+let j = 23 ;
+
+if(k != j){
+  console.log(true)
+}else{
+  console.log("false")
 }
