@@ -1,0 +1,36 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.button{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.button1{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+.button2{
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+.select{
+  margin-bottom: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
