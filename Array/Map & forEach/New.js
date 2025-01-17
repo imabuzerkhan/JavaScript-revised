@@ -41,3 +41,17 @@ fruits.forEach((currElement , index , arr)=>{
 // })
 // console.log(MyForeach)
 // !it always gives undefined beacuse it not return any value
+
+// ? Map method()
+
+fruits.map((curr , ind , arr)=>{
+  console.log(`${curr}${ind}`)
+})
+console.log("----------------------------------------------------------------")
+// it always new array when you want
+const MyMap = fruits.map((curr , ind , arr)=>{
+  return(`${curr}${ind}`)
+})
+console.log(MyMap)
+
+console.log(fruits)
