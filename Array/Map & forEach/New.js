@@ -32,3 +32,12 @@ fruits.forEach((currElement , index , arr)=>{
   console.log(`${currElement} ${index} ` )
 
 })
+
+// one more thing aabout foreach it never return a value 
+// const MyForeach = fruits.forEach((currElement , index , arr)=>{
+//   return `${currElement} ${index}`
+   // console.log(`${currElement} ${index} ` )
+
+// })
+// console.log(MyForeach)
+// !it always gives undefined beacuse it not return any value
