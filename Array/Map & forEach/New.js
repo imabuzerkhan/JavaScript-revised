@@ -26,3 +26,9 @@ for(let item of fruits){
 for(let item in fruits){
   console.log(item)
 }
+
+// foreach method
+fruits.forEach((currElement , index , arr)=>{
+  console.log(`${currElement} ${index} ` )
+
+})
