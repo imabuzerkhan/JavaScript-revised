@@ -9,7 +9,7 @@ import React from 'react'
        <div key={id} >
         <h1>{firstName}</h1>
         <h2>{age}</h2>
-        {/* <h2>{data.address}</h2> */}
+        {/* <p>{data.address}</p> */}
 
 
        </div>
