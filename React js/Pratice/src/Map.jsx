@@ -1,10 +1,29 @@
 import React from 'react'
+import { students } from './studentsData'
 
 const Map = () => {
   return (
-    <div>
-      {/* map function */}
-    </div>
+  <>
+  {
+    students.map((data) => {
+      return(
+       <div key={data.id} >
+        <h1>{data.firstName}</h1>
+        <h2>{data.age}</h2>
+        <h3>{data.address}</h3>
+        
+
+       </div>
+      )
+    })
+  }
+  
+  
+  
+  
+  
+  
+  </>
   )
 }
 
