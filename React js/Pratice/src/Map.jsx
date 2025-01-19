@@ -10,8 +10,8 @@ const Map = () => {
        <div key={data.id} >
         <h1>{data.firstName}</h1>
         <h2>{data.age}</h2>
-        <h3>{data.address}</h3>
-        
+        {/* <h2>{data.address}</h2> */}
+
 
        </div>
       )
