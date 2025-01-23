@@ -11,3 +11,19 @@ const sum = number.reduce((accumulator , currval)=>{
 
 })
 console.log(sum)
+
+
+
+
+//  for example
+const number1  = [2,3,4,5,6]
+const sum1 = number.reduce((accumulator , currval , index , array)=>{
+  // return accumulator   2
+  // return currval ;     6
+  // return index ;      4
+  return array ;      
+  
+  
+
+})
+console.log(sum1)
