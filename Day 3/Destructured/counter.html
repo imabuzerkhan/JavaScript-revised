@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>counter</title>
+</head>
+<body>
+  
+  <div class="count">0</div>
+  <button id="btn1" >+1</button>
+  <button id = "btn2" >-1</button>
+  <button id="Reset">Reset</button>
+</body>  
+<script>
+ let counting = document.getElementsByClassName("count")
+  const button1 = document.getElementById("btn1")
+  const button2 = document.getElementById("btn2")
+  const button3 = document.getElementById("Reset")
+  
+  let count = 0;
+
+  function countfun (){
+ count += 1 ;
+ console.log(count)
+ document.querySelector(".count").innerHTML = count
+ 
+   }
+  
+  button1.addEventListener("click" , countfun)
+  button2.addEventListener("click", () => {
+      if (count > 0) { // Prevent the count from going below 0
+        count -= 1;
+        document.querySelector(".count").innerHTML = count;
+        console.log(count);
+      } else {
+        console.log("Count cannot go below 0"); // Optional: log message when count is 0
+      }
+    });
+
+
+button3.addEventListener( "click" , ()=>{
+   count = 0;
+   document.querySelector(".count").innerHTML = count
+})
+
+
+
+
+    button1.addEventListener("click", countfun);
+</script>
+</html>
