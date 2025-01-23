@@ -5,12 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>counter</title>
 </head>
+<style>
+  #btn1 , #btn2 , #Reset{
+    background: #000;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .main{
+    text-align: center;
+  }
+  .count{
+    font-size: 20px;
+  }
+</style>
 <body>
-  
+<div class="main">
   <div class="count">0</div>
-  <button id="btn1" >+1</button>
-  <button id = "btn2" >-1</button>
+  <button id="btn1" >PLUS</button>
+  <button id = "btn2" >Minus</button>
   <button id="Reset">Reset</button>
+</div>
+ 
 </body>  
 <script>
  let counting = document.getElementsByClassName("count")
