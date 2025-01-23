@@ -15,15 +15,25 @@ console.log(sum)
 
 
 
-//  for example
-const number1  = [2,3,4,5,6]
-const sum1 = number.reduce((accumulator , currval , index , array)=>{
-  // return accumulator   2
-  // return currval ;     6
-  // return index ;      4
-  return array ;      
-  
-  
+// const number1 = [2, 3, 4, 5, 6];
+// const sum1 = number1.reduce((accumulator, currval, index, array) => {
+//   console.log("Accumulator:", accumulator);
+//   console.log("Current Value:", currval);
+//   console.log("Index:", index);
+//   console.log("Array:", array);
+//   console.log("----------------");
+//   return accumulator + currval; // Yeh zaroori hai accumulator ko update karne ke liye
+// }, 0); // Initial value = 0
+// console.log("Final Sum:", sum1);
 
-})
-console.log(sum1)
+
+// reduced with string
+const fruit = ["banana" , "apple", "banana" , "pinapple ", "apple"]
+constfruitcount = fruit.reduce((acc , curval)=>{
+  acc[curval] = (acc[curval] || 0) + 1 ;
+  console.log(acc[curval]);
+  console.log("----------------");
+  return acc;
+
+}, {})
+console.log(constfruitcount)
