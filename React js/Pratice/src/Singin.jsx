@@ -1,75 +1,102 @@
-import { useState } from "react";
-import axios from "axios";
+// pratice react form in length type 
 
-export default function SignupForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+import React from 'react'
+import { useState } from 'react'
+const Singin = () => {
+  const [Firstname , SetFirstname] = useState("")
+  const [Lastname , SetLastname] = useState("")
+  const [Email , SetEmail] = useState("")
+  const [Phonenumber , SetPhonenumber] = useState("")
 
-  const [message, setMessage] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+const handlevent = (e)=>{
+  const {name , value} = e.target
+
+  switch(name){
+    case "Firstname" : SetFirstname(value)
+    break;
+    case "Lastname" : SetLastname(value)
+    break;
+    case "Email" : SetEmail(value)
+    break;
+    case "Phonenumber" : SetPhonenumber(value)
+    break;
+  }
+
+}
+
+const handleForm = (e) => {
+  e.preventDefault(); // ✅ Fixed capitalization
+
+  const formData = {
+    Firstname: Firstname,
+    Lastname : Lastname ,
+    Email : Email ,
+    Phonenumber : Phonenumber
+    
+    // ✅ Capturing user input correctly
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post("https://sambandha.pythonanywhere.com/getUser", 
-      {
-        userID: "user_2pZBJk7OQblm61N2RRgbLjOgdy6",
-        ...formData,
-      }, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      setMessage("Signup successful!");
-      console.log(response.data);
-    } catch (error) {
-      setMessage("Signup failed. Please try again.");
-      console.error(error);
-    }
-  };
+  console.log(formData);
+};
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold mb-5">Signup</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full p-2 mb-3 border rounded"
-          required
+    <>
+    <h1>React form </h1>
+    <div className="main-d">
+      <form action="" onClick={handleForm} >
+       <label >FirstName:
+        <input type="text" 
+        name='Firstname'
+        placeholder='Enter the name'
+        required
+        value={Firstname}
+        onChange={handlevent}
         />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full p-2 mb-3 border rounded"
-          required
+       </label>
+
+       <label >LastName:
+        <input type="text" 
+        name='Lastname'
+        placeholder='Enter the Lastname'
+        required
+        value={Lastname}
+        onChange={handlevent}
         />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          className="w-full p-2 mb-3 border rounded"
-          required
+       </label>
+
+       <label >Email:
+        <input type="email" 
+        name='Email'
+        placeholder='Enter the Email'
+        required
+        value={Email}
+        onChange={handlevent}
         />
-        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">
-          Signup
-        </button>
+       </label>
+
+
+       <label >PhoneNumber:
+        <input type="text" 
+        name='Phonenumber'
+        placeholder='Enter the name'
+        required
+        value={Phonenumber}
+        onChange={handlevent}
+        />
+       </label>
+
+
+<button>Sumbit</button>
+
+
       </form>
-      {message && <p className="mt-3 text-center text-red-500">{message}</p>}
     </div>
-  );
+    
+    
+    
+    </>
+  )
 }
+
+export default Singin
