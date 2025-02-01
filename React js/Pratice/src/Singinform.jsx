@@ -4,10 +4,10 @@ import React from 'react'
 import { useState } from 'react'
 const SinginForm = () => {
   const [user , Setuser] = useState({
-      Firstname: Firstname,
-      Lastname : Lastname ,
-      Email : Email ,
-      Phonenumber : Phonenumber
+      Firstname: "",
+      Lastname : "" ,
+      Email : "" ,
+      Phonenumber : ""
       
       
     
@@ -17,9 +17,9 @@ const SinginForm = () => {
 
 
 const handlevent = (e)=>{
-  const {name , value} = e.target
+  // const {name , value} = e.target
 
- Setuser(( (prev) ,  {...prev , [name]:value  }))
+ Setuser( (prev) =>  ({...prev , [e.target.name]:e.target.value }))
 
 }
 
@@ -66,7 +66,7 @@ const handleForm = (e) => {
 
 
        <label >PhoneNumber:
-        <input type="text" 
+        <input type="number" 
         name='Phonenumber'
         placeholder='Enter the name'
         required
