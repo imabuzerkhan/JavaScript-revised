@@ -4,30 +4,19 @@ import React from 'react'
 import { useState } from 'react'
 const SinginForm = () => {
   const [user , Setuser] = useState({
-      Firstname: "",
-      Lastname : "" ,
-      Email : "" ,
-      Phonenumber : ""
-      
-      
-    
-  
-  })
-  
+    Firstname : "",
+    Lastname : "" ,
+    Phonenumber: "" ,
+    Email : ""
 
-
-const handlevent = (e)=>{
-  // const {name , value} = e.target
-
- Setuser( (prev) =>  ({...prev , [e.target.name]:e.target.value }))
-
+  });
+const handlevent = (e) =>{
+  Setuser((prev) => ({...prev , [e.target.name] : e.target.value }) )
 }
-
-const handleForm = (e) => {
-  e.preventDefault(); // ✅ Fixed capitalization
-
-  console.log(user);
-};
+  const handleForm = (e) =>{
+    e.preventDefault();
+    console.log(user)
+  }
 
   return (
     <>
@@ -39,8 +28,8 @@ const handleForm = (e) => {
         name='Firstname'
         placeholder='Enter the name'
         required
-        value={user.Firstname}
-        onChange={handlevent}
+       value={user.Firstname}
+       onChange={handlevent}
         />
        </label>
 

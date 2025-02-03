@@ -3,6 +3,7 @@ import Condtional from './Condtional'
 import Map from './Map'
 import SignupForm from './Singin'
 import SinginForm from './Singinform'
+import Jokes from './Jokes'
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
       <Condtional/>
       <Map/> */}
       {/* <SignupForm></SignupForm> */}
-      <SinginForm></SinginForm>
+      {/* <SinginForm></SinginForm> */}
+      <Jokes></Jokes>
     </div>
   )
 }
