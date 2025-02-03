@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+</head>
+<body>
+  <h1>creating todo list </h1>
+  <div class="main" >
+    <form action="" id="form" >
+      <input type="text"
+      class="Search"
+      id="Search"
+      required
+      >
+      <button class="btn" id="btn" >Add Todo</button>
+    </form>
+<ul id="Storetodo" ></ul>
+  </div>
+</body>
+
+<script>
+const Search_box = document.querySelector("#Search")
+const button = document.getElementById("btn")
+const Addvalue = document.getElementById("Storetodo")
+const formMain = document.getElementById("form")
+
+formMain.addEventListener("submit" , function(event){
+  event.preventDefault();
+})
+
+
+function Addtodo(){
+  const Search = Search_box.value.trim()
+if (Search == "") return ;
+
+const li = document.createElement("li")
+li.innerHTML = `${Search} <button class="delete">Delete</button>`;
+
+
+
+Addvalue.append(li)
+Search_box.value = " "
+
+li.querySelector(".delete").addEventListener("click", function() {
+  li.remove();
+
+})
+
+}
+
+button.addEventListener("click" , Addtodo)
+
+
+
+
+</script>
+
+
+</html>
