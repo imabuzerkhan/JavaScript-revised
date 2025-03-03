@@ -1,3 +1,12 @@
+body{
+  /* background-color: color-mix(in srgb, red 40% , rgb(208, 208, 208) 20% ); */
+  background-color: oklch(70% 0.7 250);
+  color: black;}
+
+  :is(h1) {
+    color: white;
+  }
+
 .container {
   min-width: 300px;
   max-width: 100%;
@@ -12,6 +21,7 @@ h1{
  width: 500px;
  max-width: 100%;
   font-size: 18px;
+  line-height: 1lh;
   font-family: 'Times New Roman', Times, serif;
 }
 img{
