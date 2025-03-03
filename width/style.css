@@ -1,0 +1,21 @@
+.container {
+  min-width: 300px;
+  max-width: 100%;
+  width: 50%;
+  border: 2px solid yellow;
+  min-height: 300px;
+  max-height: 370px;
+  /* height: 370px; */
+
+}
+h1{
+ width: 500px;
+ max-width: 100%;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+img{
+  width: 500px;
+ max-width: 100%;
+ /* min-width: 100%; */
+}
